@@ -4,8 +4,13 @@
   "description": "First-party deterministic fake sandbox provider plugin for Paperclip environments",
   "type": "module",
   "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "paperclipPlugin": {
     "manifest": "./dist/manifest.js",
